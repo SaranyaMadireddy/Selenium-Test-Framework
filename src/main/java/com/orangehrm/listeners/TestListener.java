@@ -74,13 +74,13 @@ public class TestListener implements ITestListener, IAnnotationTransformer {
 	public void onFinish(ITestContext context) {
 		// Flush Extent reports
 		ExtentManager.endTest();
-		File reportfile = new File(
-				System.getProperty("user.dir") + "/src/test/resources/extentreport/ExtentReport.html");
-		try {
-			Desktop.getDesktop().browse(reportfile.toURI());
-		} catch (IOException e) {
-			System.out.println("File No Found" + e.getMessage());
-		}
+//		File reportfile = new File(
+//				System.getProperty("user.dir") + "/src/test/resources/extentreport/ExtentReport.html");
+//		try {
+//			Desktop.getDesktop().browse(reportfile.toURI());
+//		} catch (IOException e) {
+//			System.out.println("File No Found" + e.getMessage());
+//		}
 
 	}
 
