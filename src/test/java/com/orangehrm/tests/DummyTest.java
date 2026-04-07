@@ -14,7 +14,7 @@ public class DummyTest extends BaseClass {
 		ExtentManager.logStep("Verifying the title");
 		Assert.assertEquals(getDriver().getTitle(), "OrangeHRM", "TestFailed -Title Mismatch");
 		System.out.println("Test Passed -Title is matching");
-//	throw new SkipException("Skipping the test as part of Testing");
+	throw new SkipException("Skipping the test as part of Testing");
 
 	}
 
