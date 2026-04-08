@@ -44,7 +44,7 @@ public class BaseClass {
 	protected ThreadLocal<SoftAssert> softAssert = ThreadLocal.withInitial(SoftAssert::new); // 2nd way of defining
 																								// thread local
 
-	@BeforeSuite
+	@BeforeSuite(alwaysRun = true)
 //Load Configuration file
 	public void loadConfig() throws IOException {
 //		File file = new File("./src/main/resources/config.properties");
@@ -56,8 +56,9 @@ public class BaseClass {
 
 	}
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public synchronized void setup() throws Exception {
+		System.out.println("Setup running");
 		System.out.println("Setting up WebDriver for:" + this.getClass().getSimpleName());
 		launchBrowser();
 		configureBrowser();

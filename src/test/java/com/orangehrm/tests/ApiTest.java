@@ -13,7 +13,7 @@ import com.orangehrm.utilities.RetryAnalyser;
 import io.restassured.response.Response;
 
 public class ApiTest {
-	@Test
+	@Test(groups = {"smoke"})
 	public void verifyGetUserApi() {
 
 		SoftAssert soft = new SoftAssert();

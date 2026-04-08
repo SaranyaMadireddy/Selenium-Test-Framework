@@ -16,13 +16,13 @@ public class LoginPageTest extends BaseClass {
 	private LoginPage loginpage;
 	private HomePage homepage;
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void setupPages() {
 		this.loginpage = new LoginPage(getDriver());
 		this.homepage = new HomePage(getDriver());
 	}
 
-	@Test(dataProvider = "validLoginData", dataProviderClass = DataProviders.class)
+	@Test(dataProvider = "validLoginData", dataProviderClass = DataProviders.class,groups = {"smoke"})
 	public void verifyValidLoginTest(String username, String password) {
 		System.out.println("Running testMethod1 on thread: " + Thread.currentThread().getId());
 		ExtentManager.logStep("Navigating to Login Page entering username and password");
