@@ -6,7 +6,7 @@ pipeline {
 	}
 	
 	environment{
-		COMPOSE_PATH ="${WORKSPACE}/docker" // 🔁 Adjust if compose file is elsewhere 
+		COMPOSE_PATH =	"${WORKSPACE}/docker" // 🔁 Adjust if compose file is elsewhere 
 		SELENIUM_GRID = "true"
 	}
 	
